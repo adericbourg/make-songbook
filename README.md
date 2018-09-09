@@ -23,6 +23,8 @@ Example:
 make-songbook MyLibrary
 ```
 
+The songbook will be located at the root of your song library (inside `MyLibrary` for the given example).
+
 > For simplicity reasons, only ePub format is currently supported. There is no plan to support any other format for now.
 > If you need to use another format, you may use [Calibre](https://calibre-ebook.com/) that is able to convert your ePub
 > to many other formats (mobi, azw3 or even PDF).
