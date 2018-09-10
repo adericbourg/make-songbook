@@ -1,0 +1,6 @@
+# Testing
+tox
+coveralls
+
+# Linting
+pylama

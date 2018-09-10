@@ -1,0 +1,4 @@
+/venv
+/make_songbook.egg-info/
+/.tox/
+/.coverage
