@@ -29,8 +29,7 @@
     <h1 id="{{artist.name|artist_anchor}}">{{ artist.name }}</h1>
     {% for song in artist.songs | sort(attribute='title') %}
         <h2 class="chapter" id="{{song.title|song_anchor(artist.name)}}">
-            {{ song.title }}<br/>
-            <small>{{ artist.name }}</small>
+            {{ song.title }} <small>({{ artist.name }})</small>
         </h2>
         <p class="noindent">
         {{song.content | song_content}}
