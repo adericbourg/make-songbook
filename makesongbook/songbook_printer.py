@@ -93,7 +93,7 @@ def _make_epub(target):
     zip_name = os.path.join(target, _TMP_ZIP_NAME)
     with zipfile.ZipFile(zip_name, 'w', zipfile.ZIP_DEFLATED) as zip_file:
         for f in songbook_files:
-            zip_file.write(f)
+            zip_file.write(f, os.path.basename(f))
 
     # Create epub
     os.rename(
