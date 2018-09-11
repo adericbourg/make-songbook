@@ -1,3 +1,0 @@
-{% for artist in library.artists %}
-{{artist.name}}
-{% endfor %}
