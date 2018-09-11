@@ -8,9 +8,9 @@
 <body>
 
 <h1>My songbook</h1>
-<mbp:pagebreak />
 
-<a id="TOC"><h2>Table of contents</h2></a>
+
+<a id="TOC"><h1>Table of contents</h1></a>
 <ul>
     {% for artist in library.artists | sort(attribute='name') %}
     <li>
@@ -24,7 +24,6 @@
     {% endfor %}
 </ul>
 
-<div style="page-break-before:always;"></div>
 
 {% for artist in library.artists | sort(attribute='name') %}
     <h1 id="{{artist.name|artist_anchor}}">{{ artist.name }}</h1>
@@ -37,7 +36,6 @@
         {{song.content | song_content}}
         </p>
     {% endfor %}
-    <mbp:pagebreak />
 {% endfor %}
 
 </body>
