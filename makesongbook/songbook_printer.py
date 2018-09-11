@@ -5,6 +5,6 @@
 from makesongbook.song_library import Library
 
 
-def print_library(library: Library):
+def print_library(library: Library, target: str):
     """Print library into a songbook."""
-    print("Printing library from:", library.root)
+    print("Printing library from:", target)
