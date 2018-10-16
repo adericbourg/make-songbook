@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 import os
-from setuptools import find_packages, setup
+
+import setuptools
 
 readme_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.md')
+
 try:
     from m2r import parse_from_file
 
@@ -35,10 +37,10 @@ _DEPENDENCY_LINKS = [l for l in _REQUIREMENTS_TXT if "://" in l]
 _INSTALL_REQUIRES = [l for l in _REQUIREMENTS_TXT if "://" not in l]
 _TEST_REQUIRE = [l for l in _TESTS_REQUIREMENTS_TXT if "://" not in l]
 
-setup(
+setuptools.setup(
     name='make-songbook',
     version='0.0.1',
-    packages=find_packages(),
+    packages=['makesongbook'],
     include_package_data=True,
     license='GPLv3',
     install_requires=_INSTALL_REQUIRES,
@@ -50,7 +52,7 @@ setup(
     author='Alban Dericbourg',
     author_email='alban@dericbourg.net',
     classifiers=[
-        'Intended Audience :: Music players',
+        'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
@@ -58,4 +60,9 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
+    entry_points={
+        'console_scripts': [
+            'make-songbook.pex = makesongbook.make_songbook:main'
+        ],
+    },
 )
