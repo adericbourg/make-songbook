@@ -1,0 +1,7 @@
+[package]
+name = "make-rusty-songbook"
+version = "0.1.0"
+authors = ["Alban Dericbourg <alban@dericbourg.net>"]
+edition = "2018"
+
+[dependencies]
